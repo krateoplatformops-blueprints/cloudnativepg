@@ -4,7 +4,7 @@
     # @schema
     cloudnativepg:
       # @schema
-      # description: List of CloudNativePG clusters to create
+      # description: CloudNativePG cluster to create
       # type: object
       # @schema
       instance:
