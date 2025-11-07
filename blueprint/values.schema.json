@@ -1,54 +1,38 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "additionalProperties": true,
+  "additionalProperties": false,
   "properties": {
-    "cloudnativepg": {
-      "additionalProperties": false,
-      "description": "CloudNativePG (PostgreSQL operator) configuration",
-      "properties": {
-        "instance": {
-          "additionalProperties": false,
-          "description": "CloudNativePG cluster to create",
-          "properties": {
-            "clusterName": {
-              "default": "cnpg-the-first",
-              "description": "Cluster name",
-              "title": "clusterName",
-              "type": "string"
-            },
-            "databaseName": {
-              "default": "appdb",
-              "description": "Default database name to create",
-              "title": "databaseName",
-              "type": "string"
-            },
-            "replicas": {
-              "default": 1,
-              "description": "Number of PostgreSQL instances (pods)",
-              "minimum": 1,
-              "title": "replicas",
-              "type": "integer"
-            },
-            "storageSize": {
-              "default": "1Gi",
-              "description": "Persistent storage request size per instance",
-              "pattern": "^[0-9]+Gi$",
-              "title": "storageSize",
-              "type": "string"
-            },
-            "user": {
-              "default": "appuser",
-              "description": "Database user to create",
-              "title": "user",
-              "type": "string"
-            }
-          },
-          "title": "instance",
-          "type": "object"
-        }
-      },
-      "title": "cloudnativepg",
-      "type": "object"
+    "clusterName": {
+      "default": "cnpg-the-first",
+      "description": "Cluster name",
+      "title": "clusterName",
+      "type": "string"
+    },
+    "databaseName": {
+      "default": "appdb",
+      "description": "Default database name to create",
+      "title": "databaseName",
+      "type": "string"
+    },
+    "replicas": {
+      "default": 1,
+      "description": "Number of PostgreSQL instances (pods)",
+      "minimum": 1,
+      "title": "replicas",
+      "type": "integer"
+    },
+    "storageSize": {
+      "default": "1Gi",
+      "description": "Persistent storage request size per instance",
+      "pattern": "^[0-9]+Gi$",
+      "title": "storageSize",
+      "type": "string"
+    },
+    "user": {
+      "default": "appuser",
+      "description": "Database user to create",
+      "title": "user",
+      "type": "string"
     }
   },
   "type": "object"
